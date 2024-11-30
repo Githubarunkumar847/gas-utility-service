@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<h1>Create a New Service Request</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <!-- Request Type Field -->
+    <div class="mb-3">
+        <label for="id_request_type" class="form-label">Request Type</label>
+        {{ form.request_type|add_class:"form-control" }}
+        {% if form.request_type.errors %}
+            <div class="alert alert-danger">
+                {% for error in form.request_type.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Description Field -->
+    <div class="mb-3">
+        <label for="id_description" class="form-label">Description</label>
+        {{ form.description|add_class:"form-control" }}
+        {% if form.description.errors %}
+            <div class="alert alert-danger">
+                {% for error in form.description.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Status Field -->
+    <div class="mb-3">
+        <label for="id_status" class="form-label">Status</label>
+        {{ form.status|add_class:"form-control" }}
+        {% if form.status.errors %}
+            <div class="alert alert-danger">
+                {% for error in form.status.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<a href="{% url 'service_requests_list' %}" class="btn btn-secondary mt-3">Back to List</a>
+
+{% endblock %}
+
+<!-- Global form errors (if any) -->
+{% if form.errors %}
+    <div class="alert alert-danger mt-3">
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li><strong>{{ field.name }}:</strong> {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
