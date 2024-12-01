@@ -125,3 +125,5 @@ SECURE_SSL_REDIRECT = False  # Redirect HTTP to HTTPS in production
 CSRF_COOKIE_SECURE = True  # Secure CSRF cookies in production
 SESSION_COOKIE_SECURE = True  # Secure session cookies in production
 X_FRAME_OPTIONS = 'DENY'  # Prevent clickjacking
+
+AUTH_USER_MODEL = 'accounts.User'

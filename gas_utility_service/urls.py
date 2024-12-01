@@ -17,8 +17,10 @@ Including another URLconf
 # gas_utility_service/urls.py (your project's main URL config)
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
     path('service/', include('service_requests.urls')),  # Include the URLs of your app
 ]
