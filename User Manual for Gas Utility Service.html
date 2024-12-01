@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///D:/peacock/New%20folder%20(2)/zenitsu/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Manual for Gas Utility Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .code-block {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Manual for Gas Utility Service Django Application</h1>
+        
+        <h2>1. Setting Up the Development Environment</h2>
+        <p>Before starting the server, ensure you have the necessary environment set up:</p>
+        
+        <h3>Prerequisites:</h3>
+        <ul>
+            <li><strong>Python 3.10 or later</strong> installed on your system.</li>
+            <li><strong>MySQL</strong> as the database (or the one specified in <code>settings.py</code>).</li>
+            <li><strong>Git</strong> for version control.</li>
+            <li><strong>Virtual environment</strong> for dependency management.</li>
+        </ul>
+
+        <h3>Step-by-Step Setup:</h3>
+        <ol>
+            <li><strong>Clone the Repository:</strong> If you haven't cloned the project yet, run the following command to clone it to your local machine:
+                <div class="code-block">
+                    git clone https://github.com/Githubarunkumar847/gas-utility-service.git<br>
+                    cd gas-utility-service
+                </div>
+            </li>
+            <li><strong>Create and Activate a Virtual Environment:</strong> In the project directory, run:
+                <div class="code-block">
+                    python -m venv venv<br>
+                    .\venv\Scripts\activate  # On Windows
+                </div>
+            </li>
+            <li><strong>Install Dependencies:</strong> Once the virtual environment is activated, install the required dependencies:
+                <div class="code-block">
+                    pip install -r requirements.txt
+                </div>
+            </li>
+            <li><strong>Database Setup:</strong> If you're using MySQL, ensure that your <code>settings.py</code> is configured with the correct database credentials. You can also run migrations to set up the necessary tables:
+                <div class="code-block">
+                    python manage.py migrate
+                </div>
+            </li>
+            <li><strong>Create a Superuser (Optional):</strong> To access the Django admin panel, create a superuser:
+                <div class="code-block">
+                    python manage.py createsuperuser
+                </div>
+                Follow the prompts to create a username, email, and password.
+            </li>
+        </ol>
+
+        <h2>2. Starting the Development Server</h2>
+        <p>To start the server, run the following command in the project directory:</p>
+        <div class="code-block">
+            python manage.py runserver
+        </div>
+        <p>This will start the server at the default port <strong>8000</strong>. You will see an output similar to:</p>
+        <div class="code-block">
+            Starting development server at http://127.0.0.1:8000/<br>
+            Quit the server with CONTROL-C.
+        </div>
+
+        <h2>3. Accessing the Application</h2>
+        <p>Once the server is running, you can access the application in your web browser at:</p>
+        <ul>
+            <li><strong>Home Page:</strong> <a href="http://127.0.0.1:8000/" class="link">http://127.0.0.1:8000/</a></li>
+            <li><strong>Admin Panel:</strong> <a href="http://127.0.0.1:8000/admin/" class="link">http://127.0.0.1:8000/admin/</a></li>
+        </ul>
+        <p>Log in with the superuser credentials you created earlier.</p>
+
+        <h2>4. Using the Application</h2>
+        <h3>Home Page:</h3>
+        <p>The home page is the entry point for users to access the gas utility service features. You'll find the relevant forms and information here.</p>
+
+        <h3>Admin Panel:</h3>
+        <p>After logging in to the admin panel, you can manage users, service requests, and other application data. You can create, update, or delete records as an administrator.</p>
+
+        <h2>5. Stopping the Server</h2>
+        <p>To stop the server, press <strong>Ctrl+C</strong> in the terminal where the server is running.</p>
+
+        <h2>6. Useful Links</h2>
+        <ul>
+            <li><a href="https://docs.djangoproject.com/en/stable/" class="link">Django Documentation</a></li>
+            <li><a href="https://docs.djangoproject.com/en/stable/ref/contrib/admin/" class="link">Django Admin Documentation</a></li>
+            <li><a href="https://dev.mysql.com/doc/" class="link">MySQL Documentation</a></li>
+            <li><a href="https://git-scm.com/doc" class="link">Git Documentation</a></li>
+        </ul>
+    </div>
+
+
+</body></html>
