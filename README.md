@@ -1,7 +1,3 @@
- Here's a polished and professional README file content for your GitHub repository:
-
----
-
 # Gas Utility Service  
 
 The **Gas Utility Service** project is a Django-based web application designed to streamline service request management for gas utilities. This project demonstrates a scalable architecture, clean code practices, and practical implementation of Django’s capabilities for handling requests efficiently.  
